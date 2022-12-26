@@ -7,9 +7,16 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      input: " "
+      input: "#this is markup"
     };
+    this.handleChange = this.handleChange.bind(this);
   };
+
+  handleChange(event) {
+    this.setState({
+      input: event.target.value
+    });
+  }
 
   render() {
     return (
@@ -17,14 +24,14 @@ class App extends React.Component {
         <header className="App-header"> 
           <Card bg={'info'}>
             <Card.Body>
-              <Card.Text>This is some text</Card.Text>
+              <input value={this.state.input} onChange={this.handleChange}  />
             </Card.Body>
           </Card>     
         </header>
         <body className="App-body">
           <Card bg={'info'}>
             <Card.Body>
-              <Card.Text>This is some text</Card.Text>
+              <Card.Text>{this.state.input}</Card.Text>
             </Card.Body>
           </Card>
         </body>

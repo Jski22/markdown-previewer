@@ -17,3 +17,8 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+input {
+  border-style: hidden;
+  background-color: #0dcaf0;
+}
