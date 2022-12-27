@@ -8,7 +8,9 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      input: "# this is markup"
+      input1: "# Welcome to my React Markdown Previewer!",
+      input2: "## This is a sub-heading",
+      input3: "### And here's some other cool stuff:"
     };
     this.handleChange = this.handleChange.bind(this);
   };
@@ -25,14 +27,18 @@ class App extends React.Component {
         <header className="App-header"> 
           <Card bg={'info'}>
             <Card.Body>
-              <input value={this.state.input} onChange={this.handleChange}  />
+              <input value={this.state.input1} onChange={this.handleChange}  />
+              <input value={this.state.input2} onChange={this.handleChange}  />
+              <input value={this.state.input3} onChange={this.handleChange}  />
             </Card.Body>
           </Card>     
         </header>
         <body className="App-body">
           <Card bg={'info'}>
             <Card.Body>
-              <Card.Text dangerouslySetInnerHTML={{__html: marked(this.state.input)}}></Card.Text>
+              <Card.Text dangerouslySetInnerHTML={{__html: marked(this.state.input1)}}></Card.Text>
+              <Card.Text dangerouslySetInnerHTML={{__html: marked(this.state.input2)}}></Card.Text>
+              <Card.Text dangerouslySetInnerHTML={{__html: marked(this.state.input3)}}></Card.Text>
             </Card.Body>
           </Card>
         </body>
