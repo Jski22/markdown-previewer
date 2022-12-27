@@ -1,3 +1,4 @@
+import { marked } from 'marked';
 import Card from 'react-bootstrap/Card';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
@@ -7,7 +8,7 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      input: "#this is markup"
+      input: "# this is markup"
     };
     this.handleChange = this.handleChange.bind(this);
   };
@@ -15,7 +16,7 @@ class App extends React.Component {
   handleChange(event) {
     this.setState({
       input: event.target.value
-    });
+    }); 
   }
 
   render() {
@@ -31,7 +32,7 @@ class App extends React.Component {
         <body className="App-body">
           <Card bg={'info'}>
             <Card.Body>
-              <Card.Text>{this.state.input}</Card.Text>
+              <Card.Text dangerouslySetInnerHTML={{__html: marked(this.state.input)}}></Card.Text>
             </Card.Body>
           </Card>
         </body>
