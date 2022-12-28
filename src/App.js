@@ -26,6 +26,7 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header"> 
           <Card bg={'info'}>
+            <Card.Header>Editor</Card.Header>
             <Card.Body>
               <input value={this.state.input1} onChange={this.handleChange}  />
               <input value={this.state.input2} onChange={this.handleChange}  />
@@ -35,6 +36,7 @@ class App extends React.Component {
         </header>
         <body className="App-body">
           <Card bg={'info'}>
+            <Card.Header>Previewer</Card.Header>
             <Card.Body>
               <Card.Text dangerouslySetInnerHTML={{__html: marked(this.state.input1)}}></Card.Text>
               <Card.Text dangerouslySetInnerHTML={{__html: marked(this.state.input2)}}></Card.Text>
