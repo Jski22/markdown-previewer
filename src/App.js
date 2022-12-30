@@ -1,5 +1,6 @@
 import { marked } from 'marked';
 import Card from 'react-bootstrap/Card';
+import Row from 'react-bootstrap/Row';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 import React from 'react';
@@ -28,14 +29,20 @@ class App extends React.Component {
           <Card bg={'info'}>
             <Card.Header>Editor</Card.Header>
             <Card.Body>
-              <input value={this.state.input1} onChange={this.handleChange}  />
-              <input value={this.state.input2} onChange={this.handleChange}  />
-              <input value={this.state.input3} onChange={this.handleChange}  />
+              <Row>
+                <input value={this.state.input1} onChange={this.handleChange}  />
+              </Row>
+              <Row>
+                <input value={this.state.input2} onChange={this.handleChange}  />
+              </Row>
+              <Row>
+                <input value={this.state.input3} onChange={this.handleChange}  />
+              </Row>
             </Card.Body>
           </Card>     
         </header>
         <body className="App-body">
-          <Card bg={'info'}>
+          <Card bg={'info'} id="previewer">
             <Card.Header>Previewer</Card.Header>
             <Card.Body>
               <Card.Text dangerouslySetInnerHTML={{__html: marked(this.state.input1)}}></Card.Text>
