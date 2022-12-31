@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
   background-color: #38114d;
   min-height: 100vh;
   display: flex;
@@ -10,15 +9,32 @@
 
 .App-header {
   color: white;
+  text-align: left;
+  width: 85%;
 }
 
 .App-body {
-  background-color: #38114d;
+  align-items: left;
   font-size: calc(10px + 2vmin);
+  background-color: #38114d;
   color: white;
+  text-align: left;
 }
 
-input {
+.card-header {
+  font-weight: bold;
+  font-style: italic;
+}
+
+input, textarea {
   border-style: hidden;
   background-color: #0dcaf0;
+}
+
+.card-text:first-of-type {
+  border-bottom: 3px solid;
+}
+
+.card-text:nth-of-type(2) {
+  border-bottom: 1px solid;
 }

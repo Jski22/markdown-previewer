@@ -11,7 +11,9 @@ class App extends React.Component {
     this.state = {
       input1: "# Welcome to my React Markdown Previewer!",
       input2: "## This is a sub-heading",
-      input3: "### And here's some other cool stuff:"
+      input3: "### And here's some other cool stuff:",
+      input4: "Here's some code, `<div></div>`, between 2 backticks.",
+      input5: "``` // this is multi-line code: ```" 
     };
     this.handleChange = this.handleChange.bind(this);
   };
@@ -26,7 +28,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header"> 
-          <Card bg={'info'}>
+          <Card bg={'info'} id="editor">
             <Card.Header>Editor</Card.Header>
             <Card.Body>
               <Row>
@@ -38,6 +40,12 @@ class App extends React.Component {
               <Row>
                 <input value={this.state.input3} onChange={this.handleChange}  />
               </Row>
+              <Row>
+                <textarea value={this.state.input4} onChange={this.handleChange}  />
+              </Row>
+              <Row>
+                <textarea value={this.state.input5} onChange={this.handleChange}  />
+              </Row>
             </Card.Body>
           </Card>     
         </header>
@@ -48,6 +56,8 @@ class App extends React.Component {
               <Card.Text dangerouslySetInnerHTML={{__html: marked(this.state.input1)}}></Card.Text>
               <Card.Text dangerouslySetInnerHTML={{__html: marked(this.state.input2)}}></Card.Text>
               <Card.Text dangerouslySetInnerHTML={{__html: marked(this.state.input3)}}></Card.Text>
+              <Card.Text dangerouslySetInnerHTML={{__html: marked(this.state.input4)}}></Card.Text>
+              <Card.Text dangerouslySetInnerHTML={{__html: marked(this.state.input5)}}></Card.Text>
             </Card.Body>
           </Card>
         </body>
