@@ -13,7 +13,7 @@ class App extends React.Component {
       input2: "## This is a sub-heading",
       input3: "### And here's some other cool stuff:",
       input4: "Here's some code, `<div></div>`, between 2 backticks.",
-      input5: "``` // this is multi-line code: ```" 
+      input5: "``` \n// this is multi-line code:\nfunction anotherExample(firstLine, lastLine) {\nif (firstLine == '```' && lastLine == '```') {\nreturn multiLineCode;\n  }\n}\n```" 
     };
     this.handleChange = this.handleChange.bind(this);
   };

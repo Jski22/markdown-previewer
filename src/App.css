@@ -19,11 +19,13 @@
   background-color: #38114d;
   color: white;
   text-align: left;
+  width: 95%;
 }
 
 .card-header {
   font-weight: bold;
   font-style: italic;
+  box-shadow: 5px 10px 8px #222222;
 }
 
 input, textarea {
@@ -37,4 +39,8 @@ input, textarea {
 
 .card-text:nth-of-type(2) {
   border-bottom: 1px solid;
+}
+
+.card-text:nth-of-type(5) {
+  background-color: black;
 }
