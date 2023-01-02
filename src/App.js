@@ -13,7 +13,9 @@ class App extends React.Component {
       input2: "## This is a sub-heading",
       input3: "### And here's some other cool stuff:",
       input4: "Here's some code, `<div></div>`, between 2 backticks.",
-      input5: "``` \n// this is multi-line code:\nfunction anotherExample(firstLine, lastLine) {\nif (firstLine == '```' && lastLine == '```') {\nreturn multiLineCode;\n  }\n}\n```" 
+      input5: "``` \n// this is multi-line code:\n\nfunction anotherExample(firstLine, lastLine) {\nif (firstLine == '```' && lastLine == '```') {\nreturn multiLineCode;\n  }\n}\n```",
+      input6: "You can also make text **bold**... whoa!\nOr _italic_.\nOr... wait for it... **_both!_**\nAnd feel free to go crazy ~~crossing stuff out~~.",
+      input7: "There's also [links](https://www.freecodecamp.org), and\n  > Block Quotes!"
     };
     this.handleChange = this.handleChange.bind(this);
   };
@@ -46,6 +48,12 @@ class App extends React.Component {
               <Row>
                 <textarea value={this.state.input5} onChange={this.handleChange}  />
               </Row>
+              <Row>
+                <textarea value={this.state.input6} onChange={this.handleChange}  />
+              </Row>
+              <Row>
+                <textarea value={this.state.input7} onChange={this.handleChange}  />
+              </Row>
             </Card.Body>
           </Card>     
         </header>
@@ -58,6 +66,8 @@ class App extends React.Component {
               <Card.Text dangerouslySetInnerHTML={{__html: marked(this.state.input3)}}></Card.Text>
               <Card.Text dangerouslySetInnerHTML={{__html: marked(this.state.input4)}}></Card.Text>
               <Card.Text dangerouslySetInnerHTML={{__html: marked(this.state.input5)}}></Card.Text>
+              <Card.Text dangerouslySetInnerHTML={{__html: marked(this.state.input6)}}></Card.Text>
+              <Card.Text dangerouslySetInnerHTML={{__html: marked(this.state.input7)}}></Card.Text>
             </Card.Body>
           </Card>
         </body>
