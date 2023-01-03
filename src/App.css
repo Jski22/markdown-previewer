@@ -28,19 +28,30 @@
   box-shadow: 5px 10px 8px #222222;
 }
 
-input, textarea {
+textarea {
   border-style: hidden;
   background-color: #0dcaf0;
+  height: 16em;
 }
 
-.card-text:first-of-type {
+h1 {
   border-bottom: 3px solid;
 }
 
-.card-text:nth-of-type(2) {
+h2 {
   border-bottom: 1px solid;
 }
 
-.card-text:nth-of-type(5) {
+code {
   background-color: black;
+  border: 1px solid white;
+}
+
+blockquote {
+  font-weight: bold;
+  text-indent: 2rem;
+}
+
+table, tr, td, th {
+  border: 4px solid black;
 }
