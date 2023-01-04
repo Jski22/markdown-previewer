@@ -55,20 +55,20 @@ And here. | Okay. | I think we get it.
     return (
       <div className="App">
         <header className="App-header"> 
-          <Card bg={'info'} id="editor">
+          <Card bg={'info'} >
             <Card.Header>Editor</Card.Header>
             <Card.Body>
               <Row>
-                <textarea value={this.state.input} onChange={this.handleChange}  />
+                <textarea id="editor" value={this.state.input} onChange={this.handleChange} />
               </Row>
             </Card.Body>
           </Card>     
         </header>
         <body className="App-body">
-          <Card bg={'info'} id="previewer">
+          <Card bg={'info'} >
             <Card.Header>Previewer</Card.Header>
             <Card.Body>
-              <Card.Text dangerouslySetInnerHTML={{__html: marked(this.state.input)}}></Card.Text>
+              <Card.Text id="preview" dangerouslySetInnerHTML={{__html: marked(this.state.input)}}></Card.Text>
             </Card.Body>
           </Card>
         </body>
