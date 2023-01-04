@@ -11,6 +11,7 @@
   color: white;
   text-align: left;
   width: 80%;
+  padding-bottom: 1em;
 }
 
 .App-body {
@@ -47,8 +48,10 @@ code {
 }
 
 blockquote {
-  font-weight: bold;
-  text-indent: 2rem;
+  font-style: italic;
+  float: left;
+  padding-left: 2rem;
+  padding-right: 4rem;
 }
 
 table, tr, td, th {
