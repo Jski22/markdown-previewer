@@ -34,8 +34,7 @@
 
 textarea {
   border-style: hidden;
-  /*background-color: #0dcaf0; */
-  background-color: orange;
+  background-color: #0dcaf0;
   height: 16em;
 }
 
